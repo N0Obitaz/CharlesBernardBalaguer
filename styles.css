@@ -1,6 +1,4 @@
- /* ===================================
-           CSS Variables for Themes
-           =================================== */
+
         :root {
             --bg-primary: #ffffff;
             --bg-secondary: #fafafa;
@@ -27,9 +25,6 @@
             --accent-hover: #93C5FD;
         }
 
-        /* ===================================
-           CSS Reset & Base
-           =================================== */
         * {
             margin: 0;
             padding: 0;
@@ -51,9 +46,6 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* ===================================
-           Theme Toggle Button
-           =================================== */
         .theme-toggle {
             position: fixed;
             top: 24px;
@@ -94,18 +86,39 @@
             display: none;
         }
 
-        /* ===================================
-           Container & Layout
-           =================================== */
+
         .container {
             max-width: 680px;
             margin: 0 auto;
             padding: 60px 24px 120px;
         }
 
-        /* ===================================
-           Header / Profile Section
-           =================================== */
+
+        .experience-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Keeps text aligned at the top */
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+    gap: 20px;
+}
+
+/* Container for the text details */
+.experience-info {
+    flex: 1; /* Takes up remaining space on the left */
+}
+
+/* Logo styling */
+.experience-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Prevents stretching */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    background: var(--bg-tertiary); /* Soft background if the logo has transparency */
+    padding: 4px;
+}
+
         .header {
             text-align: center;
             margin-bottom: 80px;
@@ -167,9 +180,6 @@
             opacity: 0.8;
         }
 
-        /* ===================================
-           Sections
-           =================================== */
         .section {
             margin-bottom: 64px;
         }
@@ -271,21 +281,26 @@
            Projects
            =================================== */
         .project-card {
-            display: block;
-            padding: 20px;
-            margin-bottom: 16px;
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            text-decoration: none;
-            color: inherit;
-            transition: background 0.2s ease, transform 0.2s ease;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically centers the links next to the text */
+    padding: 20px;
+    margin-bottom: 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    gap: 20px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
 
         .project-card:hover {
-            background: var(--bg-tertiary);
-            transform: translateY(-2px);
-        }
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+}
 
+.project-info {
+    flex: 1;
+}
         .project-card:last-child {
             margin-bottom: 0;
         }
@@ -297,18 +312,32 @@
             color: var(--text-primary);
         }
 
-        .project-description {
-            font-size: 14px;
-            color: var(--text-tertiary);
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
+       .project-description {
+    margin-bottom: 0; 
+}
 
-        .project-link-text {
-            font-size: 13px;
-            color: var(--accent-color);
-            font-weight: 500;
-        }
+.project-links {
+    display: flex;
+    flex-direction: column; /* Stacks links vertically */
+    gap: 8px;
+    min-width: fit-content;
+    text-align: right;
+}
+
+       .link-item {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--accent-color); /* Uses your Blue or Light Blue */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligns text/icons to the right */
+    gap: 6px;
+    transition: color 0.2s ease;
+}
+.link-item:hover {
+    color: var(--accent-hover);
+}
 
         /* ===================================
            Contact
@@ -341,7 +370,7 @@
 
         .contact-value {
             display: block;
-            font-size: 15px;
+            font-size: 13px;
             color: var(--text-primary);
             font-weight: 500;
         }
@@ -414,4 +443,18 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .project-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .project-links {
+                flex-direction: row;
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .experience-item {
+        flex-direction: row; /* Keeps it on the right even on mobile, or change to 'column' if you want it below */
+    }
         }
