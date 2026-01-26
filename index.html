@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css"/> 
    
 </head>
@@ -48,32 +49,45 @@
             <h2 class="section-title">About</h2>
             <div class="section-content">
                 <p>I'm a Backend Software Engineer specializing in building modern, robust, scalable, and secure web applications. I work on projects ranging from enterprise applications to consumer-facing products.</p>
-                <p>I've helped builde a wide range of applications from simple to complex. My focus is on creating clean, maintainable code and delivering exceptional user experiences.</p>
+                <p>I've helped building a wide range of applications from simple to complex. My focus is on creating clean, maintainable code and delivering exceptional user experiences.</p>
                 <p>Recently, I've been exploring AI utilization and integration in web applications, focusing on enhancing user interactions and automating workflows through intelligent solutions.</p>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section class="section">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-content">
-                
-                
-
-                <div class="experience-item">
-                    <h3 class="experience-title">Lead Developer</h3>
-                    <p class="experience-company">Capstone and Thesis Writing Project</p>
-                    <p class="experience-year">2026 - 2027</p>
-                </div>
-
-                <div class="experience-item">
-                    <h3 class="experience-title">BS Information Technology</h3>
-                    <p class="experience-company">Colegio de Montalban</p>
-                    <p class="experience-year">2027</p>
-                </div>
-
+       <section class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="section-content">
+        
+        <div class="experience-item">
+            <div class="experience-info">
+                <h3 class="experience-title">Full-stack Developer</h3>
+                <p class="experience-company">Sidra Chain</p>
+                <p class="experience-year">2026 - Present</p>
             </div>
-        </section>
+            <img src="img/sidra-chain.png" class="experience-logo" alt="Sidra Chain Logo">
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-info">
+                <h3 class="experience-title">Lead Developer</h3>
+                <p class="experience-company">Capstone and Thesis Writing Project</p>
+                <p class="experience-year">2026 - 2027</p>
+            </div>
+            <img src="img/Logo CDM.png" class="experience-logo" alt="Project Logo">
+        </div>
+
+        <div class="experience-item">
+            <div class="experience-info">
+                <h3 class="experience-title">BS Information Technology</h3>
+                <p class="experience-company">Colegio de Montalban</p>
+                <p class="experience-year">2027</p>
+            </div>
+            <img src="img/Logo CDM.png" class="experience-logo" alt="CDM Logo">
+        </div>
+
+    </div>
+</section>
 
         <!-- Tech Stack Section -->
         <section class="section">
@@ -85,7 +99,7 @@
                     <div class="tech-tags">
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">Bootstrap</span>
-                        <span class="tech-tag">Blazor</span>
+                        <span class="tech-tag">Blazor WASM</span>
                          <span class="tech-tag">Razor Pages</span>
                         <span class="tech-tag">Tailwind CSS</span>
                         <span class="tech-tag">HTML5</span>
@@ -99,7 +113,7 @@
                         <span class="tech-tag">C#</span>
                         <span class="tech-tag">.NET</span>
                         <span class="tech-tag">ASP.NET Core</span>
-                        <span class="tech-tag">Blazor</span>
+                        <span class="tech-tag">Blazor Server</span>
                         <span class="tech-tag">Node.js</span>
                         <span class="tech-tag">MongoDB</span>
                         <span class="tech-tag">MySQL</span>
@@ -122,24 +136,41 @@
 
         <!-- Projects Section -->
         <section class="section">
-            <h2 class="section-title">Recent Projects</h2>
+        <h2 class="section-title">Recent Projects</h2>
             <div class="section-content">
                 
-                <a href="#" class="project-card">
-                    <h3 class="project-title">AquaSeismic Monitor</h3>
-                    <p class="project-description">A real-time monitoring system for water level and earthquake occurrences.</p>
-                    <span class="project-link-text">https://github.com/N0Obitaz/MonitoringSystem →</span>
-                </a>
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3 class="project-title">AquaSeismic Monitor</h3>
+                        <p class="project-description">A real-time monitoring system for water level and earthquake occurrences.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/N0Obitaz/MonitoringSystem" target="_blank" class="link-item">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href="#" target="_blank" class="link-item">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
 
-                <a href="#" class="project-card">
-                    <h3 class="project-title">QR-based Attendance System</h3>
-                    <p class="project-description">Attendance system using QR codes and location verification</p>
-                    <span class="project-link-text">https://github.com/N0Obitaz/AttendanceSystem →</span>
-                </a>
-
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3 class="project-title">QR-based Attendance System</h3>
+                        <p class="project-description">Attendance system using QR codes and location verification</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/N0Obitaz/AttendanceSystem" target="_blank" class="link-item">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href="https://attendancesystem-gubteza6agbzfzah.eastasia-01.azurewebsites.net/" target="_blank" class="link-item">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                        </a>
+                    </div>
+                </div>
 
             </div>
-        </section>
+        </section>  
 
         <!-- Contact Section -->
         <section class="section">
@@ -148,7 +179,7 @@
                 <div class="contact-grid">
                     <a href="mailto:charles.bernard@example.com" class="contact-card">
                         <span class="contact-label">Email</span>
-                        <span class="contact-value">charles.bernard@example.com</span>
+                        <span class="contact-value">charlesbernard.balaguer.041504@gmail.com</span>
                     </a>
                     <a href="https://calendly.com/yourusername" class="contact-card">
                         <span class="contact-label">Let's Talk</span>
