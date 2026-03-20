@@ -15,16 +15,26 @@
 </head>
 <body>
     
-    <!-- Theme Toggle Button -->
-    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-    </button>
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#tech-stack" class="nav-link">Tech Stack</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </nav>
     
     <!-- Main Container -->
     <div class="container">
@@ -45,7 +55,7 @@
         </header>
 
         <!-- About Section -->
-        <section class="section">
+        <section id="about" class="section">
             <h2 class="section-title">About</h2>
             <div class="section-content">
                 <p>I'm a Backend Software Engineer specializing in building modern, robust, scalable, and secure web applications. I work on projects ranging from enterprise applications to consumer-facing products.</p>
@@ -55,7 +65,7 @@
         </section>
 
         <!-- Experience Section -->
-       <section class="section">
+       <section id="experience" class="section">
     <h2 class="section-title">Experience</h2>
     <div class="section-content">
         
@@ -90,7 +100,7 @@
 </section>
 
         <!-- Tech Stack Section -->
-        <section class="section">
+        <section id="tech-stack" class="section">
             <h2 class="section-title">Tech Stack</h2>
             <div class="section-content">
                 
@@ -135,7 +145,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section class="section">
+        <section id="projects" class="section">
         <h2 class="section-title">Recent Projects</h2>
             <div class="section-content">
                 
@@ -173,7 +183,7 @@
         </section>  
 
         <!-- Contact Section -->
-        <section class="section">
+        <section id="contact" class="section">
             <h2 class="section-title">Get in Touch</h2>
             <div class="section-content">
                 <div class="contact-grid">
@@ -205,7 +215,10 @@
             <p>© 2025 Charles Bernard. All rights reserved.</p>
         </footer>
 
-    </div>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script>
         // Theme Toggle
@@ -227,6 +240,24 @@
         
         // Initialize theme on page load
         initTheme();
+        
+        // Back to Top functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
         
         console.log('Portfolio loaded ✓');
     </script>
