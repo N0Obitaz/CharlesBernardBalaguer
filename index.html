@@ -11,108 +11,120 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
-    <!-- Sticky Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#tech-stack" class="nav-link">Tech Stack</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </div>
-        <!-- Theme Toggle Button -->
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-            <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-        </button>
-    </nav>
+    <!-- Layout: fixed sidebar + main content -->
+    <div class="layout">
 
-    <!-- Main Container -->
-    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-inner">
 
-        <!-- Header with Profile -->
-        <header class="header">
-            <div class="profile-image">
-                <img src="img/Me.JPEG" alt="Charles Bernard">
-            </div>
-            <h1 class="name">Charles Bernard</h1>
-            <p class="location">Rizal, Philippines</p>
-            <p class="title">ASP.NET Core Developer — Enterprise & AI</p>
+                <a href="#about" class="brand">Hi<span class="brand-dot">.</span></a>
 
-            <div class="header-links">
-                <a href="mailto:charlesbernard.balaguer.041504@gmail.com" class="link-btn">Hire Me</a>
-                <a href="#projects" class="link-btn">View My Work</a>
-            </div>
-        </header>
-
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2 class="section-title">About</h2>
-            <div class="section-content">
-                <p>I'm an ASP.NET Core backend developer focused on integrating AI capabilities into enterprise-grade systems. I recently led a team of 8 to build MonteAI — an AI-powered research assistant with RAG natively integrated into an ASP.NET Core Web API, keeping data validated and controlled within the .NET ecosystem.</p>
-                <p>I'm currently interning at FlyRank AI as a Backend AI Engineer while freelancing at Sidra Chain as a Full-stack Developer.</p>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="section">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-content">
-
-                <div class="experience-item">
-                    <div class="experience-info">
-                        <h3 class="experience-title">Backend AI Engineer Intern</h3>
-                        <p class="experience-company">FlyRank AI</p>
-                        <p class="experience-year">2026 — Present</p>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="img/Me.JPEG" alt="Charles Bernard">
                     </div>
-                    <img src="img/flyrank_logo.jpg" class="experience-logo" alt="FlyRank AI Logo">
+                    <h1 class="name">Charles Bernard</h1>
+                    <p class="location">Rizal, Philippines</p>
+                    <p class="title">ASP.NET Core Developer — Enterprise &amp; AI</p>
                 </div>
 
-                <div class="experience-item">
-                    <div class="experience-info">
-                        <h3 class="experience-title">Full-stack Developer</h3>
-                        <p class="experience-company">Sidra Chain</p>
-                        <p class="experience-year">2026 — Present</p>
-                    </div>
-                    <img src="img/sidra-chain.png" class="experience-logo" alt="Sidra Chain Logo">
-                </div>
+                <nav class="nav">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
 
-                <div class="experience-item">
-                    <div class="experience-info">
-                        <h3 class="experience-title">Lead Developer</h3>
-                        <p class="experience-company">Capstone & Thesis Project — MonteAI</p>
-                        <p class="experience-year">2026 — 2027</p>
+                <div class="sidebar-footer">
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/charles-bernard-balaguer-283839360/" target="_blank" class="social-btn" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://github.com/n0obitaz" target="_blank" class="social-btn" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <img src="img/Logo CDM.png" class="experience-logo" alt="CDM Logo">
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-info">
-                        <h3 class="experience-title">BS Information Technology</h3>
-                        <p class="experience-company">Colegio de Montalban</p>
-                        <p class="experience-year">2027</p>
-                    </div>
-                    <img src="img/Logo CDM.png" class="experience-logo" alt="CDM Logo">
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M10 2V4M10 16V18M18 10H16M4 10H2M15.657 4.343L14.243 5.757M5.757 14.243L4.343 15.657M15.657 15.657L14.243 14.243M5.757 5.757L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="moon-icon" width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
 
             </div>
-        </section>
+        </aside>
 
-        <!-- Tech Stack Section -->
-        <section id="tech-stack" class="section">
-            <h2 class="section-title">Tech Stack</h2>
-            <div class="section-content">
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- About -->
+            <section id="about" class="section">
+                <h2 class="section-title"><span class="num">01.</span>About</h2>
+                <div class="about-text">
+                    <p>I'm an <span class="hl">ASP.NET Core</span> backend developer focused on integrating AI capabilities into enterprise-grade systems. I recently led a team of 8 to build MonteAI — an AI-powered research assistant with RAG natively integrated into an ASP.NET Core Web API, keeping data validated and controlled within the .NET ecosystem.</p>
+                    <p>I'm currently interning at FlyRank AI as a Backend AI Engineer while freelancing at Sidra Chain as a Full-stack Developer.</p>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience" class="section">
+                <h2 class="section-title"><span class="num">02.</span>Experience</h2>
+                <div class="experience-list">
+
+                    <div class="experience-item">
+                        <img src="img/flyrank_logo.jpg" class="experience-logo" alt="FlyRank AI Logo">
+                        <div class="experience-info">
+                            <h3 class="experience-title">Backend AI Engineer Intern</h3>
+                            <p class="experience-company">FlyRank AI</p>
+                            <p class="experience-year">2026 — Present</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <img src="img/sidra-chain.png" class="experience-logo" alt="Sidra Chain Logo">
+                        <div class="experience-info">
+                            <h3 class="experience-title">Full-stack Developer</h3>
+                            <p class="experience-company">Sidra Chain</p>
+                            <p class="experience-year">2026 — Present</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <img src="img/Logo CDM.png" class="experience-logo" alt="CDM Logo">
+                        <div class="experience-info">
+                            <h3 class="experience-title">Lead Developer</h3>
+                            <p class="experience-company">Capstone &amp; Thesis Project — MonteAI</p>
+                            <p class="experience-year">2026 — 2027</p>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <img src="img/Logo CDM.png" class="experience-logo" alt="CDM Logo">
+                        <div class="experience-info">
+                            <h3 class="experience-title">BS Information Technology</h3>
+                            <p class="experience-company">Colegio de Montalban</p>
+                            <p class="experience-year">2027</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section id="tech-stack" class="section">
+                <h2 class="section-title"><span class="num">03.</span>Tech Stack</h2>
 
                 <div class="tech-category">
                     <h3 class="tech-category-title">Backend</h3>
@@ -128,7 +140,7 @@
                 </div>
 
                 <div class="tech-category">
-                    <h3 class="tech-category-title">DevOps & Tools</h3>
+                    <h3 class="tech-category-title">DevOps &amp; Tools</h3>
                     <div class="tech-tags">
                         <span class="tech-tag">Git</span>
                         <span class="tech-tag">GitHub</span>
@@ -151,124 +163,109 @@
                     </div>
                 </div>
 
-            </div>
-        </section>
+            </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Projects</h2>
-            <div class="section-content">
+            <!-- Projects -->
+            <section id="projects" class="section">
+                <h2 class="section-title"><span class="num">04.</span>Projects</h2>
+                <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-info">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-index">01</span>
+                            <span class="project-icons">
+                                <a href="https://github.com/Capstone-Collaboration-Group/MonteAI" target="_blank" aria-label="MonteAI repository"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
                         <h3 class="project-title">MonteAI</h3>
                         <p class="project-description">A multi-platform AI research assistant leveraging RAG natively integrated into an ASP.NET Core Web API — built for thesis research at Colegio de Montalban.</p>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Capstone-Collaboration-Group/MonteAI" target="_blank" class="link-item">
-                            <i class="fa-brands fa-github"></i> Repository
-                        </a>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-info">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-index">02</span>
+                            <span class="project-icons">
+                                <a href="https://github.com/N0Obitaz/MonitoringSystem" target="_blank" aria-label="AquaSeismic Monitor repository"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
                         <h3 class="project-title">AquaSeismic Monitor</h3>
                         <p class="project-description">A real-time environmental monitoring system for water level and earthquake occurrences, built with WebSockets and ASP.NET Core.</p>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/N0Obitaz/MonitoringSystem" target="_blank" class="link-item">
-                            <i class="fa-brands fa-github"></i> Repository
-                        </a>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-info">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-index">03</span>
+                            <span class="project-icons">
+                                <a href="https://github.com/Philippine-Roll-Ball/PHROLLBALL" target="_blank" aria-label="Philippine Roll Ball Association repository"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                <a href="https://phrollball.vercel.app/" target="_blank" aria-label="Philippine Roll Ball Association live demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
                         <h3 class="project-title">Philippine Roll Ball Association</h3>
                         <p class="project-description">Official sports management web system built with React + Vite frontend and ASP.NET Core backend.</p>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/Philippine-Roll-Ball/PHROLLBALL" target="_blank" class="link-item">
-                            <i class="fa-brands fa-github"></i> Repository
-                        </a>
-                        <a href="https://phrollball.vercel.app/" target="_blank" class="link-item">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                        </a>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-info">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <span class="project-index">04</span>
+                            <span class="project-icons">
+                                <a href="https://github.com/N0Obitaz/AttendanceSystem" target="_blank" aria-label="QR-based Attendance System repository"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                                <a href="https://attendancesystem-gubteza6agbzfzah.eastasia-01.azurewebsites.net/" target="_blank" aria-label="QR-based Attendance System live demo"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            </span>
+                        </div>
                         <h3 class="project-title">QR-based Attendance System</h3>
                         <p class="project-description">Attendance system using QR codes and geolocation verification, deployed on Azure.</p>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/N0Obitaz/AttendanceSystem" target="_blank" class="link-item">
-                            <i class="fa-brands fa-github"></i> Repository
-                        </a>
-                        <a href="https://attendancesystem-gubteza6agbzfzah.eastasia-01.azurewebsites.net/" target="_blank" class="link-item">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
-                        </a>
-                    </div>
+
                 </div>
+            </section>
 
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2 class="section-title">Get in Touch</h2>
-            <div class="section-content">
+            <!-- Contact -->
+            <section id="contact" class="section">
+                <h2 class="section-title"><span class="num">05.</span>Get in Touch</h2>
                 <div class="contact-grid">
                     <a href="mailto:charlesbernard.balaguer.041504@gmail.com" class="contact-card">
-                        <span class="contact-label">Email</span>
-                        <span class="contact-value">charlesbernard.balaguer.041504@gmail.com</span>
+                        <i class="fa-solid fa-envelope contact-icon" aria-hidden="true"></i>
+                        <span>
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">charlesbernard.balaguer.041504@gmail.com</span>
+                        </span>
                     </a>
                     <a href="https://calendly.com/charlesbernard-balaguer-041504/30min" target="_blank" class="contact-card">
-                        <span class="contact-label">Let's Talk</span>
-                        <span class="contact-value">Schedule a Call</span>
+                        <i class="fa-solid fa-calendar-days contact-icon" aria-hidden="true"></i>
+                        <span>
+                            <span class="contact-label">Let's Talk</span>
+                            <span class="contact-value">Schedule a Call</span>
+                        </span>
                     </a>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Social Links Section -->
-        <section class="section">
-            <h2 class="section-title">Social Links</h2>
-            <div class="section-content">
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/charles-bernard-balaguer-283839360/" target="_blank" class="social-link">LinkedIn →</a>
-                    <a href="https://github.com/n0obitaz" target="_blank" class="social-link">GitHub →</a>
-                </div>
-            </div>
-        </section>
+            <!-- Footer -->
+            <footer class="footer">
+                <p>© 2026 Charles Bernard. All rights reserved.</p>
+            </footer>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>© 2026 Charles Bernard. All rights reserved.</p>
-        </footer>
-
+        </main>
     </div>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fa-solid fa-arrow-up"></i>
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <script>
         const themeToggle = document.getElementById('themeToggle');
 
         const initTheme = () => {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            if (savedTheme === 'dark') {
-                document.body.classList.add('dark-theme');
+            const savedTheme = localStorage.getItem('theme-v2') || 'dark';
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
             }
         };
 
         themeToggle.addEventListener('click', () => {
-            const isDark = document.body.classList.toggle('dark-theme');
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            const isLight = document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme-v2', isLight ? 'light' : 'dark');
         });
 
         initTheme();
@@ -287,7 +284,22 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        console.log('Portfolio loaded ✓');
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const spy = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => {
+                        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+
+        sections.forEach((section) => spy.observe(section));
+
+        console.log('Portfolio v2 loaded ✓');
     </script>
 
 </body>
